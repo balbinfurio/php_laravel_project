@@ -14,5 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('welcome'); //welcome es el nombre del archivo alojado en resources/views 
+});
+
+Route::get('/test', function () {
+    return 'Decilo!';
+});
+
+Route::get('/formato_json', function() {
+    return [
+        'saludo' => 'Hola',
+        'nombre' => 'Furio'
+    ];
+});
+
+Route::get('/exe1', function() {
+    return view('exe1');
 });
