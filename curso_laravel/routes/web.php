@@ -17,10 +17,6 @@ Route::get('/', function () {
     return view('welcome'); //welcome es el nombre del archivo alojado en resources/views 
 });
 
-Route::get('/test', function () {
-    return 'Decilo!';
-});
-
 Route::get('/formato_json', function() {
     return [
         'saludo' => 'Hola',
@@ -28,6 +24,8 @@ Route::get('/formato_json', function() {
     ];
 });
 
-Route::get('/exe1', function() {
-    return view('exe1');
+Route::get('/test', function() {
+    return view('test', [
+        'tittle' => 'Curso Laravel Platzi!!'
+    ]);
 });

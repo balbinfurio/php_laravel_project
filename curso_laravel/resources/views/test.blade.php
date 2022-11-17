@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>EXE1</title>
+        <title>Test</title>
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -35,6 +35,18 @@
                     @endauth
                 </div>
             @endif
+
+
+            <div class="test">
+                <div class="tittle">
+                    @isset($tittle)
+                    {{ $tittle }}
+                    @else
+                        {{ 'No TEXT' }}
+                    @endisset
+                </div>
+            </div>
+
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
