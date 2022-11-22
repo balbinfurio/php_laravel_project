@@ -18,9 +18,9 @@ Route::get('/dashboard', [DashboardController::class, 'index']);
 //     ];
 // });
 
-// Route::get('/carpeta_anidada/archivo_anid', function() {
-//     return view('carpeta_anidada.archivo_anid'); // ejemplo con carpeta y archivo anidados
-// });
+Route::get('/carpeta_anidada/archivo_anid', function() {
+    return view('carpeta_anidada.archivo_anid'); // ejemplo con carpeta y archivo anidados
+});
 
 // Route::get('/test', function() {
 //     return view('test', [
