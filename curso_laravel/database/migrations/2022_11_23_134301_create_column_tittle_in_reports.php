@@ -13,9 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('expense_reports', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::table('expense_reports', function (Blueprint $table) {
+            $table->text('tittle')->after('id');
         });
     }
 
@@ -26,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('expense_reports');
+        Schema::table('expense_reports', function (Blueprint $table) {
+            $table->dropColumn('tittle');
+        });
     }
 };
